@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=test1234
+      - POSTGRES_DB=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+      - RABBITMQ_DEFAULT_VHOST=admin
+    ports:
+      - '5672:5672' # AMQP port
+      - '15672:15672' # management port
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq
+volumes:
+  db:
+    driver: local
+  rabbitmq:
+    driver: local

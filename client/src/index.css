@@ -1,0 +1,30 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(97, 97, 97);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
