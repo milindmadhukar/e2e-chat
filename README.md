@@ -39,5 +39,16 @@ There was also a lot of thinking and planning required to get the project up and
 7. The other user now uses the first users public key to generate the shared secret key and decreypts the message.
 8. The message is then stored on other users browser.
 
+## Development setup
+You will need Docker and Nodejs installed on your system.
+
+1. Go to `./server` and do `docker compose up` to startup postgres and rabbitmq.
+2. Create a `.env` file by copying contents of `.env.example` file.
+3. Use command `yarn install` or `npm install` to install dependencies.
+4. Run `yarn start` or `npm start` to start the server.
+5. Go to `./client` and run `yarn install` or `npm install` to install dependencies.
+6. Run `yarn start` or `npm start` to start the client server.
+7. Now visit `localhost:3000` in your browser.
+
 Thank you for reading so far :D
 Enjoy! Any contributions are welcome.
